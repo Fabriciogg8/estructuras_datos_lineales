@@ -1,5 +1,5 @@
 import random
-from one_classroom import Array
+from class_1 import Array
 
 class Matrix:
     def __init__(self, rows, columns, fill_value=None):
