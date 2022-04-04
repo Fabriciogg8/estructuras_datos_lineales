@@ -21,8 +21,9 @@ class LinkedList:
             currentNode = currentNode.next
         return lenght
 
-    # Method for insert new head node
+
     def insertHead(self, newNode):
+        ''' Method for insert new head node '''
         #auxiliar variable
         probe = self.head
 
@@ -30,8 +31,9 @@ class LinkedList:
         self.head.next = probe
         del probe
 
-    # Method for insert a node in a new position
     def insertAt(self, newNode, position):
+    ''' Method for insert a node in a new position '''
+
         if position < 0 or position > self.listLength():
             print("Invalid position")
             return
@@ -50,8 +52,8 @@ class LinkedList:
             currentNode = currentNode.next
             currentPosition += 1
 
-    # Insert node at the end
     def insertEnd(self, newNode):
+    ''' Insert node at the end '''
         if self.head is None:
             self.head = newNode
         else:
@@ -62,8 +64,9 @@ class LinkedList:
                 lastNode = lastNode.next
             lastNode.next = newNode
 
-    # Delete the last node
+    
     def deleteEnd(self):
+        ''' Delete the last node '''
         lastNode = self.head
         while lastNode.next is not None:
             previousNode = lastNode

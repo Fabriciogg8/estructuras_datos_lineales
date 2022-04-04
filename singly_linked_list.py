@@ -17,7 +17,8 @@ class LinkedList:
         if self.head is None:
             self.head = newNode
         else:
-            # 
+            # Comenzamos por head, mientras el siguiente valor sea diferente de None iremos igualando lastNode a 
+            # el siguiente valor
             lastNode = self.head
             while True:
                 if lastNode.next is None:

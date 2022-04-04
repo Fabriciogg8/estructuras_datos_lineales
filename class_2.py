@@ -2,15 +2,17 @@ from class_1 import Array
 
 class Grid:
     def __init__(self, rows, columns, fill_value=None):
+        # Hacemos referencia a un Array y le pasamos como atributo los filas
         self.data = Array(rows)
         for row in range(rows):
+            # Cda dato de la fila, contendrá un Array que serán las columnas
             self.data[row] = Array(columns, fill_value)
     
     # A diferencia del array de una dimension, no tendremos solo la longitud, sino altura y ancho.
     def get_height(self):
         return len(self.data)
 
-    # Self.data en el indice cero, porque estamos anidando un array. 
+    # Self.data en el indice cero (o en cualquier índice debería ser lo mismo), porque estamos anidando un array. 
     def get_width(self):
         return len(self.data[0])
 

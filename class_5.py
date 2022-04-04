@@ -23,3 +23,5 @@ class ListQueue():
 
         for item in range(total_items):
             print(self.items[item])
+
+            
